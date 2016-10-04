@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "微软雅黑";
+}
+.mini-player{
+    width:540px;
+    height:115px;
+    background: #000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    border-bottom: 10px solid;
+    margin:auto;
+    z-index: 10; 
+    .autor-pic{
+       display: block;
+        width: 90px;
+        height: 90px;
+        margin: 10px;
+        float: left;
+        background: url(./image/music.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .center{
+        float: right;
+        width: 430px;
+        font-size: 12px;
+        line-height: 1.5em;
+        p{
+            margin: 5px 0;
+        }
+        .music-name{
+            color: #FFF;
+            height: 20px;
+            width: 300px;
+            overflow: hidden;
+             span{
+                float: left;
+                max-width: 210px;
+                overflow: hidden;
+            }
+            a{
+                float: left;
+                width: 75px;
+                height: 20px;
+                margin: 0 0 0 10px;
+                background: url(./image/bg.png) -453px -55px;
+            }
+        }
+        .singer{
+            color: #828282;
+            display: block;
+            width: 120px;
+            height: 20px;
+            overflow: hidden;
+            margin: 5px 0;
+        }
+        .music-date{
+            color: #595959;
+            height: 20px;
+             margin: 5px 0;
+        }
+        .music-op{
+            height: 20px;
+            .like{
+                float: left;
+                width: 16px;
+                height: 14px;
+                margin-right: 5px;
+                cursor: pointer;
+                background: url(./image/bg.png) 0 -127px;
+                &:hover{
+                    background: url(./image/bg.png) -0px -145px;
+                }
+            }   
+            .share{
+                float: left;
+                width: 16px;
+                height: 14px;
+                margin-right: 5px;
+                cursor: pointer;
+                background: url(./image/bg.png) -16px -127px;
+                &:hover{
+                    background: url(./image/bg.png) -16px -145px;
+                }
+            }
+        }
+    } 
+     .bar-op{
+        position: absolute;
+        left: 248px;
+        top: 43px;
+        width: 280px;
+        z-index: 10000;
+        .previous{
+            background: url(./image/bg.png) -69px 0 ;
+            display: block;
+            vertical-align: top;
+            width: 36px;
+            height: 28px;
+            float: left;
+            margin-top: 7px;
+            margin-left: 3px;
+            border: 0;
+            cursor: pointer;
+            &:hover{
+                background-position: -69px -32px;
+            }
+        }
+         .play{
+            width: 42px;
+            height: 42px;
+            margin-top: 0;
+            background: url(./image/bg.png) -105px 0 ;
+            display: block;
+            float: left;
+            margin-left: 3px;
+            border: 0;
+            cursor: pointer;
+            &:hover{
+                background-position: -105px -42px;
+            }
+        }
+        .pause{
+            width: 42px;
+            height: 42px;
+            margin-top: 0;
+            background: url(./image/bg.png) -291px -88px ;
+            float: left;
+            margin-left: 3px;
+            border: 0;
+            cursor: pointer;
+            &:hover{
+                background-position: -333px -88px;
+            }
+        }
+        .next{
+            background: url(./image/bg.png) -147px 0;
+            vertical-align: top;
+            width: 36px;
+            height: 28px;
+            float: left;
+            margin-top: 7px;
+            margin-left: 3px;
+            border: 0;
+            cursor: pointer;
+            &:hover{
+                background-position: -147px -32px;
+            }    
+        }
+        .ordered_bt{
+            background: url(./image/bg.png) -291px -32px;
+            display: block;
+            vertical-align: top;
+            width: 36px;
+            height: 28px;
+            float: left;
+            margin-top: 7px;
+            margin-left: 3px;
+            border: 0;
+            cursor: pointer;
+            &:hover{
+                background-position: -291px -60px;
+            }
+        }
+        .unordered_bt{
+            background: url(./image/bg.png) -327px -32px;
+            display: block;
+            vertical-align: top;
+            width: 36px;
+            height: 28px;
+            float: left;
+            margin-top: 7px;
+            margin-left: 3px;
+            border: 0;
+            cursor: pointer;
+            &:hover{
+                background-position:-327px -60px; 
+            }
+        }
+        .cycle_single_bt{
+            background: url(./image/bg.png) -255px 0;
+            display: block;
+            vertical-align: top;
+            width: 36px;
+            height: 28px;
+            float: left;
+            margin-top: 7px;
+            margin-left: 3px;
+            border: 0;
+            cursor: pointer;
+            &:hover{
+                background-position: -255px -32px;
+            }
+        }
+        .cycle_bt{
+            background: url(./image/bg.png) -219px 0;
+            display: block;
+            vertical-align: top;
+            width: 36px;
+            height: 28px;
+            float: left;
+            margin-top: 7px;
+            margin-left: 3px;
+            border: 0;
+            cursor: pointer;
+            &:hover{
+                background-position: -219px -32px;
+            }
+        }
+        
+        .volome{
+            width: 100px;
+            height: 24px;
+            float: left;
+            margin-top: 10px;
+            margin-left: 8px;
+            .volome-mute{
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+                background: url(./image/bg.png) -189px -3px;
+                float: left;
+                &:hover{
+                    background-position:-189px -35px;
+                }
+            }
+            .jingyin{
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+                background: url(./image/bg.png) -152px -63px;
+                float: left;
+                &:hover{
+                    background-position:-189px -63px;
+                }
+            }
+             .volume-regulate{
+                font-size: 0;
+                background: url(./image/bg.png) -291px -11px;
+                display: inline-block;
+                width: 71px;
+                height: 11px;
+                cursor: pointer;
+                float: right;
+                margin-top: 6px;
+                position: relative;
+                &.moving .volume-bar{
+                    background-position: -291px -22px;
+                }
+                &.moving .volume-op{
+                    background-position: -366px -16px;
+                }
+            }
+            .volume-bar{
+                font-size: 0;
+                background: url(./image/bg.png) -291px 0;
+                display: inline-block;
+                height: 11px;
+                position: absolute;
+                width: 10%;
+            }
+            .volume-op{
+                background: url(./image/bg.png)  -366px 0;
+                font-size: 0;
+                width: 6px;
+                height: 11px;
+                position: absolute;
+                left: 10%;
+                top: 0;
+            }
+         }
+    } 
+    .open-list{
+        background: url(./image/bg.png) -222px -97px;
+        display: inline-block;
+        width: 47px;
+        height: 28px;
+        border: 0;
+        position: absolute;
+        top: 0;
+        right: 61px;
+        cursor: pointer;
+        div{
+            color: #FFF;
+            font-family: tahoma;
+            font-size: 11px;
+            line-height: 28px;
+            text-align: center;
+            width: 24px;
+            height: 28px;
+            margin-left: 23px;
+        }
+    }
+    .open-lyrics{
+        width: 14px;
+        height: 14px;
+        background: url(./image/bg.png) -452px 0;
+        position: absolute;
+        top: 7px;
+        right: 37px;
+        text-indent: -9999px;
+        cursor: pointer;
+    }
+    .playbar_select{
+        display: none;
+        background-color: #383838;
+        width: 32px;
+        padding: 5px 0;
+        position: absolute;
+        left: 376px;
+        _left: 379px;
+        bottom: 35px;
+        _bottom: 34px;
+        border-radius: 3px;
+        z-index: 999999;
+        .ordered_bt{
+            background: url(./image/bg.png) no-repeat -408px 0;
+            display: block;
+            width: 32px;
+            height: 22px;
+            cursor: pointer;
+            &t:hover{
+                background-position: -408px -22px;
+            }
+        }
+        .unordered_bt{
+            background: url(./image/bg.png) no-repeat -408px -44px;
+            display: block;
+            width: 32px;
+            height: 22px;
+            cursor: pointer;
+            &t:hover{
+               background-position: -408px -66px;
+            }
+        }
+        .cycle_single_bt{
+           background: url(./image/bg.png) no-repeat -376px 0;
+            display: block;
+            width: 32px;
+            height: 22px;
+            cursor: pointer;
+            &t:hover{
+                background-position: -376px -22px;
+            }
+        }
+        .cycle_bt{
+            background: url(./image/bg.png) no-repeat -376px -44px;
+            display: block;
+            width: 32px;
+            height: 22px;
+            cursor: pointer;
+           &t:hover{
+                background-position: -376px -66px;
+            }
+        }
+    }    
+    .player-bar {
+        font-size: 0;
+        width: 541px;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        .player-bg-bar {
+            width: 100%;
+            background: #323232;
+            font-size: 0;
+            height: 4px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .download-bar {
+            background: #2c4838;
+            font-size: 0;
+            height: 4px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .play-current-bar {
+            position: absolute;
+            background: #0cc65b;
+            font-size: 0;
+            display: block;
+            height: 4px;
+            z-index: 3;
+            cursor: pointer;
+        }
+        .progress-op {
+            display: block;
+            width: 7px;
+            height: 6px;
+            background: url(./image/anniu.png) no-repeat;
+            position: absolute;
+            z-index: 3;
+            top: -1px;
+            left: -3px;
+            cursor: pointer;
+        }
+    }
+    .time_show {
+        display: none;
+        width: 50px;
+        height: 24px;
+        position: absolute;
+        z-index: 999999;
+        left: 293px;
+        bottom: 8px;
+        .square{
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            left:50%;
+            bottom:0;
+            margin-left: -6px;
+            border: solid 1px #666;
+            background: #2f2f2f;
+            transform:rotate(45deg);
+            z-index:10;
+        }
+        #time_show{
+            height: 17px;
+            line-height: 17px;
+            color: #fff;
+            border: solid 1px #666;
+            background: #2f2f2f;
+            font-size: 10px;
+            text-align: center;
+            font-family: Arial,Helvetica;
+            z-index: 99;
+            position: relative;
+        }
+    }     
+}
+.shouqi{
+        transform:translateY(100%);
+    }
+.play-list{
+    width: 540px;
+    height: 460px;
+    background: #1B1B1B;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 115px;
+    margin: auto;
+    z-index: 2;
+    transition:all 0.8s ease;
+    
+    .liebiao{
+        width: 520px;
+        height: 52px;
+        background: #000;
+        border-bottom:1px solid #262626;
+        padding-right: 20px;
+        position: relative;
+        .tab{
+            line-height: 52px;
+            width: 112px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 100;
+            background: #262626;
+            float: left;
+            position: relative;
+            .xiaojiao{
+                width: 15px;
+                height: 8px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom:-8px;
+                margin: auto;
+                background: url(./image/bg.png);
+                background-position: -504px -28px;
+            }
+        }
+        .clear-list{
+            float: right;
+            color: #999;
+            line-height: 52px;
+            font-size: 12px;
+            cursor: pointer;
+        
+        }
+        .close{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: url(./image/bg.png);
+            background-position: -269px -97px;
+        }
+    }
+    ul{
+        padding: 8px 0px;
+    }
+    li{
+       height: 24px;
+       line-height: 24px;
+       transition:all 0.4s ease;
+       font-size: 12px;
+       color: #999;
+       padding-left: 20px;
+       position: relative;
+       cursor:pointer;
+       &::after{
+            content: "";
+            clear:both;
+            display: block;
+        }
+        &:hover{
+            background: #000;
+            color: white;   
+        }
+        &:hover .opration{
+            display: block;
+        }
+        &.playing{
+            color:#10A029;  
+        }
+    }
+    .song-name{
+        float: left;
+        width: 60%;
+    }
+    .artistan{
+        float: left;
+        width: 30%;
+    }
+    .duration{
+        float: left;
+        width: 10%
+    }
+    .opration{
+        display: none;
+        position: absolute;
+        width:120px;
+        height: 14px;
+        right: 0;
+        top: 5px;
+        z-index: 1000; 
+        background: #000000;
+        .like{
+            float: left;
+            width: 16px;
+            height: 14px;
+            margin-right: 5px;
+            cursor: pointer;
+            background: url(./image/bg.png) 0 -127px;
+            &:hover{
+                background: url(./image/bg.png) -0px -145px;
+            }
+        }
+        .share{
+            float: left;
+            width: 16px;
+            height: 14px;
+            margin-right: 5px;
+            cursor: pointer;
+            background: url(./image/bg.png) -16px -127px;
+            &:hover{
+                background: url(./image/bg.png) -16px -145px;
+            }
+        }
+        .shoucang{
+            float: left;
+            width: 16px;
+            height: 14px;
+            margin-right: 5px;
+            cursor: pointer;
+            background: url(./image/bg.png) -32px -127px;
+            &:hover{
+                background: url(./image/bg.png) -32px -145px;
+            }
+        }
+        .delete{
+            width: 16px;
+            height: 14px;
+            margin-right: 5px;
+            cursor: pointer;
+            float: left;
+            background: url(./image/bg.png) -48px -127px;
+            &:hover{
+                background: url(./image/bg.png) -48px -145px;
+            }
+        }
+    }
+}

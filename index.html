@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>音乐播放器</title>
+		<script src="jquery.js"></script>
+		<script src="index.js"></script>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+	<audio style="display:none" controls id="audio"></audio>
+	<div class="player">
+		<div class="mini-player">
+			<div class="autor-pic"></div>
+			<div class="center">
+				<p class="music-name">
+					<span id="music-name">听我想听的歌</span>
+					<a class="icon-radio"></a>
+				</p>
+				<p class="singer">
+					qq音乐
+				</p>
+				<p class="music-date">....</p>
+				<p class="music-op">
+		             <strong class="like" title="喜欢"></strong>
+		             <strong class="share" title="分享"></strong>
+                </p>				
+			</div>
+			<div class="bar-op">
+				<div class="previous" title="上一首"></div>
+				<div class="play"></div>
+				<div class="next" title="下一首"></div>
+				<!-- 循环 -->
+				<div class="cycle_bt">
+				</div>
+				<!--声音-->
+				<div class="volome">
+					<div class="volome-mute" title="点击设置为静音"></div>
+					<div class="volume-regulate">
+			              <div class="volume-bar"></div>
+			              <div class="volume-op"></div>
+			        </div>
+				</div>				
+			</div>
+			<div class="open-list">
+				<div></div>				
+			</div>			
+			<div class="open-lyrics">				
+			</div>
+			<!-- 循环次数	 -->
+			<div class="playbar_select">
+		        <div title="顺序播放" class="ordered_bt btn"></div>
+			    <div title="随机播放" class="unordered_bt btn"></div>
+			    <div title="单曲循环" class="cycle_single_bt btn"></div>
+			    <div title="列表循环" class="cycle_bt btn"></div>
+		    </div>
+		        
+            <!-- 音乐播放条 -->
+            <p class="player-bar">
+		          <span class="player-bg-bar"></span>
+		          <span class="download-bar"></span>
+		          <span class="play-current-bar"></span>
+		          <span class="progress-op"></span>
+            </p>
+            
+            <!-- 时间框 -->
+            <div class="time_show">
+	          <p id="time_show">--:--</p>
+	          <div class='square'></div>
+           </div>
+		</div>
+		
+		<!-- 列表 -->
+		<div class="play-list">
+			<div class="liebiao">
+				<div class="tab">播放列表
+                    <div class="xiaojiao"></div>
+				</div>
+				<span class="clear-list">清空列表</span>
+				<div class="close"></div>				
+			</div>
+			<ul>
+				 <!--<li>
+					<span class="song-name" >Song Name</span>
+					<span class="artistan" alt="aaaaa">ARTistan</span>
+					<span class="duration">12:12</span>
+					<div class="opration">
+						<div class="like"></div>
+						<div class="share"></div>
+						<div class="shoucang"></div>
+						<div class="delete"></div>
+				    </div>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+	
+</body>
+	</body>
+</html>
